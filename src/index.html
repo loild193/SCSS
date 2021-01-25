@@ -4,9 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <title>SCSS</title>
 </head>
 <body>
-  <div class="navbar"></div>
+  <nav class="nav">
+    <div class="nav__inner container">
+      <div class="nav__section">
+        <a class="nav__logo-text" href="/">Soundcloud</a>
+      </div>
+      <div class="nav__section">
+        <div class="nav-search">
+          <i class="nav-search__icon fas fa-search" aria-hidden="true"></i>
+          <input class="nav-search__input" type="text" placeholder="Search"/>
+          <i class="nav-search__clear fas fa-times" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
 </body>
 </html>
