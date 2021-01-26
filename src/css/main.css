@@ -1,7 +1,11 @@
 .nav {
   width: 100%;
   height: 5rem;
-  background-color: #333; }
+  background-color: #333;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0; }
   .nav__inner {
     display: flex;
     justify-content: space-between;
@@ -34,7 +38,7 @@
     border: 0;
     color: #bababa;
     padding: 0.5rem 0.5rem;
-    min-width: 15rem;
+    max-width: 15rem;
     font-size: 1.15rem;
     flex: 1; }
   .nav-search__clear {
@@ -54,4 +58,96 @@
     font-size: 1rem; }
   .nav-search__input {
     padding: 0.25rem 0.5rem;
-    font-size: 1rem; } }
+    font-size: 1rem;
+    max-width: 100%; } }
+
+.all-songs {
+  display: flex;
+  flex-wrap: wrap; }
+
+.song {
+  margin: 0.5rem; }
+  .song__image {
+    background-image: url(https://i1.sndcdn.com/artworks-000144608849-4nygrt-t300x300.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 12rem; }
+    .song__image__overlay {
+      width: 100%;
+      height: 12rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color ease-in 0.3s; }
+      .song__image__overlay .icon {
+        visibility: hidden;
+        font-size: 2rem;
+        color: #bebebe;
+        opacity: 0;
+        transition: opacity ease-in 0.3s; }
+        .song__image__overlay .icon::before {
+          content: "\f144"; }
+      .song__image__overlay:hover {
+        background-color: #000000a8; }
+      .song__image__overlay:hover .icon {
+        visibility: visible;
+        opacity: 1; }
+  .song__detail {
+    display: flex;
+    min-height: 2rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center; }
+    .song__detail a {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-decoration: none; }
+      .song__detail a:hover {
+        text-decoration: underline; }
+  .song__information {
+    overflow: hidden; }
+  .song__singer__avatar {
+    background-image: url(https://i1.sndcdn.com/avatars-000192021911-pqvimw-large.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem; }
+  .song__name {
+    font-size: 15px;
+    color: #f4b82d; }
+    .song__name:hover {
+      color: #f4b82d; }
+  .song__singer__name {
+    font-size: 13px;
+    color: #c7c7c7; }
+    .song__singer__name:hover {
+      color: #c7c7c7; }
+
+@media only screen and (max-width: 767.98px) and (min-width: 320px) {
+  .song {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #292929;
+    margin: 0 0.5rem 0 0;
+    padding: 0.5rem 0; }
+    .song__image {
+      max-height: 3rem;
+      min-height: 0;
+      min-width: 3rem;
+      margin-right: 1rem; }
+  .song__image__overlay {
+    height: 3rem; }
+    .song__image__overlay .icon {
+      font-size: 1.25rem; }
+  .song__detail {
+    margin-top: 0; }
+  .song__singer__avatar {
+    display: none; } }
