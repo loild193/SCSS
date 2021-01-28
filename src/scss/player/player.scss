@@ -1,0 +1,60 @@
+.div-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #333;
+}
+.song-player {
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+  background-color: #333;
+}
+
+.player {
+  display: flex;
+  flex: 2;
+
+  .song__detail--player {
+    margin-top: 0;
+  }
+  .song__avatar {
+    background-image: url(https://i1.sndcdn.com/artworks-000144608849-4nygrt-t300x300.jpg);
+  }
+}
+
+.utils {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 5;
+
+  &__icon {
+    margin: 0 0.5rem;
+    color: #a0a0a0;
+    cursor: pointer;
+  }
+
+  &__run {
+    display: flex;
+    align-items: center;
+    color: #a0a0a0;
+
+    &--slider {
+      width: 20rem;
+      height: 0.5rem;
+      background-color: #000000ba;
+      margin: 0 0.5rem;
+    }
+  }
+
+  &__more--volume {
+    display: inline-block;
+    width: 6rem;
+    height: 0.5rem;
+    background-color: #fa961bba;
+    margin: 0 0.5rem;
+  }
+}
